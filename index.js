@@ -11,7 +11,7 @@ form.addEventListener("submit", function (e) {
   //name = user input
   // value = input name (same as id)
   for (let [name, value] of data) {
-    //document.getElementById(name).value = "";
+    document.getElementById(name).value = "";
     inputArray.push(value);
     nameArray.push(name);
   }
@@ -20,10 +20,9 @@ form.addEventListener("submit", function (e) {
 });
 
 function printCard() {
-  let card = document.createElement('div');
+  let card = document.createElement("div");
   card.id = `card-${cardNum}`;
   card.setAttribute("class", "card created");
-
 
   let title = document.createElement("p");
   title.textContent = inputArray[0];
@@ -43,7 +42,6 @@ function printCard() {
   imgLink.setAttribute("class", "created img");
 
   conatiner.append(card);
-  card.append(title, dsc, imgLink);
+  card.append(title, imgLink, dsc);
   console.log("success");
 }
-
