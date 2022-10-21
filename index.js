@@ -10,7 +10,7 @@ form.addEventListener("submit", function (e) {
   //name = user input
   // value = input name (same as id)
   for (let [name, value] of data) {
-    //document.getElementById(name).value = "";
+    document.getElementById(name).value = "";
     inputArray.push(value);
     nameArray.push(name);
   }
