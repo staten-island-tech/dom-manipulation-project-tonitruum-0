@@ -39,86 +39,6 @@ h1 {
   align-items: center;
   transition: filter 200ms ease, transform 200ms ease;
 }
-/* 
-@media screen and (max-width: 810px) {
-  .card {
-    width: 30vw;
-    padding: 1.5vw;
-    border-radius: 1.5vw;
-  }
-  .img {
-    border-radius: 1.5vw;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .card {
-    width: 60vw;
-    padding: 2.5vw;
-    border-radius: 2.5vw;
-  }
-  .img {
-    border-radius: 2.5vw;
-  }
-  h1 {
-    font-size: 20vw;
-  }
-  span {
-    display: block;
-  }
-} */
-
-.img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  border-radius: var(--curve);
-  align-items: center;
-}
-
-.text {
-  color: black;
-  text-align: center;
-  font-size: 1.5vw;
-}
-
-/* ANIMATIONS */
-
-/* .blur {
-  animation: colorswap 0.75s ease 1;
-}
-
-.middleBlur {
-  animation: middleBlur 2s ease 1;
-} */
-
-/* @media screen and (max-width: 810px) {
-  .blur {
-    animation: none !important;
-  }
-
-  .middleBlur {
-    animation: none !important;
-  }
-} */
-
-.bg {
-  z-index: -1;
-  width: 100%;
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-}
-
-.bg::before {
-  width: calc(100vw + 100vh);
-  height: calc(100vw + 100vh);
-  content: "";
-  position: absolute;
-  background-image: conic-gradient(var(--color1), var(--color2), var(--color1));
-  animation: 15s linear infinite rot;
-  translate: -50vh -50vw;
-}
 
 form,
 #resetBtn {
@@ -146,6 +66,69 @@ input,
   margin: 1rem;
 }
 
+@media screen and (max-width: 810px) {
+  .card {
+    width: 30vw;
+    padding: 1.5vw;
+    border-radius: 1.5vw;
+  }
+  .img {
+    border-radius: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 60vw;
+    padding: 2.5vw;
+    border-radius: 2.5vw;
+  }
+  .img {
+    border-radius: 2.5vw;
+  }
+  h1 {
+    font-size: 20vw;
+  }
+  span {
+    display: block;
+  }
+}
+
+.img {
+  display: flex;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--curve);
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  color: black;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.bg {
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+.bg::before {
+  width: calc(100vw + 100vh);
+  height: calc(100vw + 100vh);
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(var(--color1), var(--color2), var(--color1));
+  animation: 15s linear infinite rot;
+  translate: -50vh -50vw;
+}
+
+
 @keyframes rot {
   0% {
     transform: rotate(0);
@@ -161,4 +144,10 @@ input,
   margin: 0.5rem auto;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.7rem;
+
 }
