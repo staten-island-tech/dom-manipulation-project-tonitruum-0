@@ -4,9 +4,9 @@
   --color2: #42378f;
 }
 
-html {
+* {
   box-sizing: border-box;
-  font-family: "Barlow", monospace;
+  font-family: "Oswald", monospace;
   font-weight: 400;
 }
 
@@ -40,8 +40,7 @@ h1 {
   transition: filter 200ms ease, transform 200ms ease;
 }
 
-form,
-#resetBtn {
+form {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -49,16 +48,30 @@ form,
   flex-direction: column;
 }
 
-#resetBtn {
+#btnHolder {
   margin: 0 30px auto 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto 30px 0 30px;
+  flex-direction: row;
 }
 
 input,
 #reset,
+#resetRecent,
 #submit {
+  font-family: 'Oswald', monospace;
+  font-weight: 600;
+  letter-spacing: .1vw;
   width: 20vw;
   border-radius: 0.25vw;
   margin: 0.3vw;
+}
+
+#reset,
+#resetRecent {
+  width: 9.7vw;
 }
 
 #reset input[type="text"] {

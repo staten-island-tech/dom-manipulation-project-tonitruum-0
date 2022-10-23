@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dom manipulation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100&display=swap" rel="stylesheet" />
-  
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100&Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="bgHolder">
-        <div class="bg"></div>
-      </div>
-    <form id="form">
-        <input required type="text" id="title" name="title" placeholder="Title" autocomplete="off">
-        <input required type="text" id="dsc" name="dsc" placeholder="Description" autocomplete="off">
-        <input type="text" id="imgLink" name="imgLink" placeholder="Image Link" autocomplete="off">
-        <input id="submit" type="submit" value="Submit">
-    </form>
-    <div id="resetBtn"><button id="reset" onClick="refresh()">Reset</button></div>
-    <div class="container" id="cardContainer">
-
+      <div class="bg"></div>
     </div>
+    <form id="form">
+      <input
+        required
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Title"
+        autocomplete="off"
+      />
+      <input
+        required
+        type="text"
+        id="dsc"
+        name="dsc"
+        placeholder="Description"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        id="imgLink"
+        name="imgLink"
+        placeholder="Image Link"
+        autocomplete="off"
+      />
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+    <div id="btnHolder">
+      <button id="reset" onClick="refresh()">Reset</button>
+      <button id="resetRecent" onClick="resetRecent()">Undo latest card</button>
+    </div>
+    <div class="container" id="cardContainer"></div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

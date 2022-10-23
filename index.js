@@ -58,3 +58,9 @@ function printCard() {
 function refresh() {
   document.getElementById("cardContainer").innerHTML="";
 }
+
+function resetRecent () {
+  document.getElementById(`card-${cardNum}`).remove();
+  cardNum -= 1;
+  console.log(cardNum);
+}
