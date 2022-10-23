@@ -64,14 +64,14 @@ input,
   font-family: 'Oswald', monospace;
   font-weight: 600;
   letter-spacing: .1vw;
-  width: 20vw;
+  width: 30vw;
   border-radius: 0.25vw;
   margin: 0.3vw;
 }
 
 #reset,
 #resetRecent {
-  width: 9.7vw;
+  width: 14.7vw;
 }
 
 #reset input[type="text"] {
@@ -88,6 +88,16 @@ input,
   .img {
     border-radius: 1.5vw;
   }
+  input,
+#reset,
+#resetRecent,
+#submit{
+  width: 35vw;
+}
+#reset,
+#resetRecent {
+  width: 17.2vw;
+}
 }
 
 @media screen and (max-width: 500px) {
@@ -104,6 +114,19 @@ input,
   }
   span {
     display: block;
+  }
+  input,
+  #reset,
+  #resetRecent,
+  #submit{
+    width: 62vw;
+    margin: .8vw;
+
+  }
+  #reset,
+  #resetRecent {
+    width: 30.7vw;
+    margin: .8vw .4vw;
   }
 }
 
