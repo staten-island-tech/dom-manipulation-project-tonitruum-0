@@ -1,10 +1,10 @@
-let DOMSelectors = {};
+let DOMSelectors = {
+  container:  document.getElementById("cardContainer")
+};
 
 let inputArray = [];
 let nameArray = [];
-let conatiner = document.getElementById("cardContainer");
 let cardNum = 0;
-let blankFields = "false";
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -48,7 +48,7 @@ function printCard() {
     imageValue = imgLink;
   }
 
-  conatiner.append(card);
+  DOMSelectors.container.append(card);
   card.append(title, imageValue, dsc);
   inputArray = [];
   nameArray = [];
